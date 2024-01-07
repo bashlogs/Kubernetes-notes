@@ -5,4 +5,4 @@ root: ./
   summary: SUMMARY.md​
 
 redirects:
-  previous/page: notes/page.md
+  previous/page: notes/
