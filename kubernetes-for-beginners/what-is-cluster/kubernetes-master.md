@@ -13,4 +13,4 @@ Master node controls and manages the worker nodes. The master node consists of s
 * **Controller Manager**: The process that runs various controllers that regulate the cluster state, such as node controller, replication controller, endpoints controller, etc.
 * **etcd**: The distributed key-value store that stores the cluster configuration and state.
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>

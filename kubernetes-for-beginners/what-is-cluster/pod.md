@@ -4,7 +4,7 @@ A Pod is the smallest unit in the Kubernetes ecosystem, akin to a container in t
 
 While multiple containers can coexist within a Pod, the recommended practice is often to have one primary container per Pod for efficiency. Additionally, multiple Pods can be deployed on a single worker node in a Kubernetes cluster.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 ### Extra&#x20;
 

@@ -22,7 +22,7 @@ To create deployment:&#x20;
 kubectl create deployment nginx-deploy --image=nginx
 ```
 
-<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 To get description / details of our pods
 
@@ -30,11 +30,11 @@ To get description / details of our pods
 kubectl describe deployment nginx-deploy
 ```
 
-<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
 This is the description of pods
 
-<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 ```
 Name of deployment: nginx-deploy-d845cc945
@@ -51,7 +51,7 @@ To scale our deployment use following command
 kubectl scale deployment nginx-deploy --replicas=5
 ```
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 To scale down the deployment size use the same command
 
@@ -59,7 +59,7 @@ To scale down the deployment size use the same command
 kubectl scale deployment nginx-deploy --replicas=3
 ```
 
-<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
 Right now, we won't be able to connect this pod because pod are running internally in our node.
 
@@ -79,13 +79,13 @@ To expose those port use command expose
 kubectl expose deployment nginx-deploy --port=8080 --target-port=80
 ```
 
-<figure><img src="../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
 Cluster ip addresses are virtual ip addresses which is create by kubernetes our ip address starts from 172.0.0.1
 
 Cluster ip address is accessible from our minikubes
 
-<figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 To get information about service
 
@@ -97,7 +97,7 @@ kubectl get svc
 kubectl describe service <service_name>
 ```
 
-<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
 
 So far now, We learned about deployment, scaling deployment and services.
 
@@ -117,7 +117,7 @@ To delete services :&#x20;
 kubectl delete service nginx-deploy
 ```
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
 ### Creating express node application
 
@@ -139,7 +139,7 @@ Then push it in your docker hub
 docker push <username>/<image_name>
 ```
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 Once the image is pushed into docker hub we can deploy our project in minikube
 
@@ -154,7 +154,7 @@ For ex..
 kubectl create deployment web-hello --image=bashlogs/web-hello
 ```
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 Now let's create service
 
@@ -162,11 +162,11 @@ Now let's create service
 kubectl expose deployment web-hello --port=3000
 ```
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 Now we have create service for our app, you can check it by login into minikube
 
-<figure><img src="../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 Scaling the deployment
 
@@ -174,11 +174,11 @@ Scaling the deployment
 kubectl scale deployment web-hello --replicas=4
 ```
 
-<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 Now if we try to access the service inside minikube, node will automatically give response from different pods. Because it's managing the load between all pods
 
-<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 Until now, we have created service for internal ip address. let's create the service for external ip address.
 
@@ -196,7 +196,7 @@ Create a new service with type nodeport
 kubectl expose deployment web-hello --type=NodePort --port=3000
 ```
 
-<figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 Now the external port is created 30627. Now you can connect to your deployment using node ip address
 
@@ -207,7 +207,7 @@ To get the node ip address enter:
 minikube ip
 ```
 
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
 if you refresh the website you'll get response from different pod every time
 
@@ -217,7 +217,7 @@ You can also try this command
 minikube service web-hello
 ```
 
-<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
 
 ### Create loadbalancer service
 
@@ -231,7 +231,7 @@ To create loadbalancer service
 kubectl expose deployment web-hello --type=LoadBalancer --port=3000
 ```
 
-<figure><img src="../.gitbook/assets/image (29).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 To get information about deploy application&#x20;
 
@@ -239,7 +239,7 @@ To get information about deploy application&#x20;
 kubectl describe deploy web-hello
 ```
 
-<figure><img src="../.gitbook/assets/image (30).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 Now you can see strategy type rolling update.&#x20;
 
@@ -264,7 +264,7 @@ Github : [https://github.com/bashlogs/Kubernetes/tree/main/web\_hello2](https://
 I also build docker image and push it into docker hub\
 Docker: [https://hub.docker.com/repository/docker/bashlogs/web-hello/general](https://hub.docker.com/repository/docker/bashlogs/web-hello/general)
 
-<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 Now let's roll out this 2.0 image in our kubernetes
 
@@ -280,15 +280,15 @@ To see how the update happen enter this command
 kubectl rollout status deploy web-hello
 ```
 
-<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 Here 3 pods where already updated only one pod was remaining for rolling update
 
-<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 Look at age of the pods old pods got terminated and new pods got created
 
-<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 App got updated successfully
 

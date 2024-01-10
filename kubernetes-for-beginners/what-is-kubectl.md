@@ -6,7 +6,7 @@ Kubectl works by communicating with the Kubernetes API server, authenticating wi
 
 It is an essential tool for creating, managing, or deleting resources on your Kubernetes platform.
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 
 

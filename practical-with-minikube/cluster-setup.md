@@ -33,7 +33,7 @@ After Installation check the status:
 minikube status
 ```
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/VirtualBox_JUDYAdqQTJ.png" alt=""><figcaption></figcaption></figure>
 

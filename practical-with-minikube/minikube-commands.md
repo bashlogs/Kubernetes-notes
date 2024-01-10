@@ -40,7 +40,7 @@ docker ps
 // Remainber docker is a default container runtime for kubernetes
 ```
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 After entering docker ps you will see different kubernete services are running like kube proxy, apiserver, scheduler etc.
 
@@ -68,7 +68,7 @@ To get the pod information
 kubectl get pods
 ```
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
 To list all namespaces avialable in kubectl server
 
@@ -76,7 +76,7 @@ To list all namespaces avialable in kubectl server
 kubectl get namespaces
 ```
 
-<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 To check which pods are running inside our namespaces
 
@@ -92,7 +92,7 @@ kubectl run nginx --image=nginx
 
 It will pull the nginx image from the docker
 
-<figure><img src="../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 It takes time to pull nginx image from docker
 
@@ -102,15 +102,15 @@ To get more details of the pod
 kubectl describe pod nginx
 ```
 
-<figure><img src="../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 This are the logs how container is created inside pod
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 You can go back to the minikube virtual machine and see the container.
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 Pause container are created to keep namespaces in kubernetes pod share namespaces.
 
@@ -134,7 +134,7 @@ You can also see this ip address outside of the container
 kubectl get pods -o wide
 ```
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 10.244.0.3 is a internal ip address of a container so cannot connect through outside world.
 
@@ -152,7 +152,7 @@ To increase the scaling of pod and deploye our application we will learn about d
 kubectl delete pod nginx
 ```
 
-<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 Now this pod is deleted include the namespace and volume connected to this pod
 

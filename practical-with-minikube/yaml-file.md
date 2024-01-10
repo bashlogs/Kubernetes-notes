@@ -14,7 +14,7 @@ To delete everything you have create
 kubectl delete all -all
 ```
 
-<figure><img src="../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 ### YAML Configuration
 
@@ -63,7 +63,7 @@ To deploy the application or to apply the yaml file
 kubectl apply -f .\deployment.yaml
 ```
 
-<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 service.yaml file
 
@@ -88,9 +88,9 @@ Apply the changes of service.yaml
 kubectl apply -f service.yaml
 ```
 
-<figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 It's easy to delete the deployment also
 
@@ -98,7 +98,7 @@ It's easy to delete the deployment also
 kubectl delete -f deployment.yaml -f service.yaml
 ```
 
-<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 ### Two deployment connectivity
 
@@ -197,17 +197,17 @@ Let's apply both files
 kubectl apply -f .\web-to-nginx.yaml -f .\nginx.yaml
 ```
 
-<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 After apply the yaml file our application got deployed
 
-<figure><img src="../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 Some of the pods are not running to still we can connect to our application
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
 
 
 
@@ -224,13 +224,13 @@ With the help of the dns lookup we can check the ip of nginx container
 kubectl exec web-to-nginx-6dfcf89756-g2r7c -- nslookup nginx
 ```
 
-<figure><img src="../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
 
 ```
  kubectl exec web-to-nginx-6dfcf89756-g2r7c -- wget -qO- http://nginx
 ```
 
-<figure><img src="../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 
 

@@ -20,7 +20,7 @@ All of this done without your intervention
 
 ### Kubernetes Architecture
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption><p>Kubernetes Architecture</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption><p>Kubernetes Architecture</p></figcaption></figure>
 
 Reference Video : \
 [https://youtu.be/d6WC5n9G\_sM](https://youtu.be/d6WC5n9G\_sM)  \
