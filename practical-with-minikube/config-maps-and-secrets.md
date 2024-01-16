@@ -94,7 +94,7 @@ kubectl apply -f .\configMaps\nginx-cm.yml
 kubectl apply -f .\configMaps\nginx-deploy.yml
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We can go inside the file and see if the configuration applied or not
 
@@ -102,7 +102,7 @@ We can go inside the file and see if the configuration applied or not
 Command - kubectl exec -it <pod_name> -- /bin/bash
 ```
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Let's see if the configuration successfully applied or not by creating service for nginx
 
@@ -159,7 +159,91 @@ First directly access to the index.html file and second 401 error
 
 The secrets work like the config maps but the values inside the secrets are obfuscated with the base64.&#x20;
 
-Secrets can be used to store password, tokens, certificates etc
+Secrets can be used to store password, tokens, certificates etc.
+
+{% tabs %}
+{% tab title="mysql-deploy.yml" %}
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+spec:
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: mysql
+        image: mysql:5.6
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: root-pass
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+
+        ports:
+        - containerPort: 3306
+
+```
+{% endtab %}
+
+{% tab title="mysql-secret.yml" %}
+```yaml
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+type: Opaque
+stringData:
+  root-pass: test123
+
+```
+{% endtab %}
+{% endtabs %}
+
+Run both the files
+
+```
+kubectl apply -f .\configMaps\mysql-secret.yml
+```
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+To Edit the secret file
+
+```
+kubectl edit secrets mysql-secret
+```
+
+Now the mysql-deploy file
+
+```
+kubectl apply -f .\configMaps\mysql-deploy.yml
+```
+
+Now to check if the password is successfully applied or not go inside the pod
+
+```
+kubectl exec -it mysql-7b9465b6cb-wn7zb -- /bin/bash
+```
+
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+
+
+
+
+
 
 
 
