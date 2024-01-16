@@ -6,7 +6,7 @@ Today, [Kubernetes](https://www.ibm.com/topics/kubernetes) is the most popular c
 
 ## How container orchestration works ?
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 While there are differences in methodologies and capabilities across tools, container orchestration is essentially a three-step process (or cycle, when part of an iterative agile or DevOps pipeline).
 

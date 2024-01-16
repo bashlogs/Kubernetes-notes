@@ -23,6 +23,7 @@
   * [YAML File](practical-with-minikube/yaml-file.md)
   * [Container Runtime](practical-with-minikube/container-runtime.md)
   * [Volume Management](practical-with-minikube/volume-management.md)
+  * [Config Maps and Secrets](practical-with-minikube/config-maps-and-secrets.md)
 * [Kubernetes for Developers](kubernetes-for-developers.md)
 * [Practical - 2](practical-2.md)
 * [Temp Bookmarks](temp-bookmarks.md)
