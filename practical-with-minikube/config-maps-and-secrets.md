@@ -94,7 +94,7 @@ kubectl apply -f .\configMaps\nginx-cm.yml
 kubectl apply -f .\configMaps\nginx-deploy.yml
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We can go inside the file and see if the configuration applied or not
 
@@ -169,6 +169,7 @@ kind: Deployment
 metadata:
   name: mysql
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -178,22 +179,21 @@ spec:
         app: mysql
     spec:
       containers:
-      - name: mysql
-        image: mysql:5.6
+      - image: mysql:5.7
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "1000m"
+        name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:
               name: mysql-secret
               key: root-pass
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-
         ports:
-        - containerPort: 3306
-
+        - name: mysql
+          containerPort: 3306
 ```
 {% endtab %}
 
@@ -206,7 +206,6 @@ metadata:
 type: Opaque
 stringData:
   root-pass: test123
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -217,7 +216,7 @@ Run both the files
 kubectl apply -f .\configMaps\mysql-secret.yml
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 To Edit the secret file
 
@@ -237,13 +236,19 @@ Now to check if the password is successfully applied or not go inside the pod
 kubectl exec -it mysql-7b9465b6cb-wn7zb -- /bin/bash
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+## Nginx Certificate in a secret
 
+{% tabs %}
+{% tab title="First Tab" %}
 
+{% endtab %}
 
+{% tab title="Second Tab" %}
 
-
+{% endtab %}
+{% endtabs %}
 
 
 
