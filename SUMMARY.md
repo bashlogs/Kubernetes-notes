@@ -27,3 +27,4 @@
 * [Kubernetes for Developers](kubernetes-for-developers.md)
 * [Practical - 2](practical-2.md)
 * [Temp Bookmarks](temp-bookmarks.md)
+* [NFS Server](nfs-server.md)
