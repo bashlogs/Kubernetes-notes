@@ -8,7 +8,7 @@ This service runs on each worker node and its job is to manage the container. It
 * **Kube-proxy**: The network proxy that runs on each node and maintains the network rules and connections.
 * **Container runtime**: The software that runs and manages the containers, such as Docker, containerd, CRI-O, etc.
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption><p>Worker Node</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption><p>Worker Node</p></figcaption></figure>
 
 ### Extra
 

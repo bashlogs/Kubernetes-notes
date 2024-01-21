@@ -151,7 +151,7 @@ Run the nfs-pv.yml file
 kubectl apply -f nfs-pv.yml
 ```
 
-<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 We have created the persistence volume now it's time to claim those persistence.
 
@@ -159,7 +159,7 @@ We have created the persistence volume now it's time to claim those persistence.
 kubectl apply -f nfs-pvc.yml
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 pvc is successfully bound by pv.
 

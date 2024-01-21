@@ -94,7 +94,7 @@ kubectl apply -f .\configMaps\nginx-cm.yml
 kubectl apply -f .\configMaps\nginx-deploy.yml
 ```
 
-<figure><img src="../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We can go inside the file and see if the configuration applied or not
 
@@ -102,7 +102,7 @@ We can go inside the file and see if the configuration applied or not
 Command - kubectl exec -it <pod_name> -- /bin/bash
 ```
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Let's see if the configuration successfully applied or not by creating service for nginx
 
@@ -126,7 +126,7 @@ spec:
 ```
 {% endcode %}
 
-<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now go inside the container and create a index.html file and add some content.
 
@@ -142,14 +142,14 @@ cd /usr/share/nginx/html/
 vi index.html
 ```
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Both configuration applied to the pods.\
 First directly access to the index.html file and second 401 error
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Secrets
 
@@ -216,7 +216,7 @@ Run both the files
 kubectl apply -f .\configMaps\mysql-secret.yml
 ```
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 To Edit the secret file
 
@@ -236,7 +236,7 @@ Now to check if the password is successfully applied or not go inside the pod
 kubectl exec -it mysql-7b9465b6cb-wn7zb -- /bin/bash
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 ## Nginx Certificate in a secret
 
