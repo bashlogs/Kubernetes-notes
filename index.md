@@ -44,6 +44,6 @@ Chapter 16. Kubernetes Community
 
 ## Part - 2 ( Kubernetes for Developers )
 
-{% content-ref url="kubernetes-for-developers.md" %}
-[kubernetes-for-developers.md](kubernetes-for-developers.md)
+{% content-ref url="kubernetes-for-developers/" %}
+[kubernetes-for-developers](kubernetes-for-developers/)
 {% endcontent-ref %}
