@@ -18,6 +18,12 @@ For Virtualbox:&#x20;
 minikube start --driver=virtualbox --no-vtx-check
 ```
 
+For Docker
+
+```
+minikube start --driver=docker
+```
+
 For Hyper-v, hyperkit, parallels, vmware
 
 ```

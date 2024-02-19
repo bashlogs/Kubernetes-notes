@@ -11,7 +11,7 @@ Then with the apply command we can configure everything in one click
 To delete everything you have create
 
 ```
-kubectl delete all -all
+kubectl delete all --all
 ```
 
 <figure><img src="../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
