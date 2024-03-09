@@ -16,6 +16,9 @@ For Virtualbox:&#x20;
 
 ```
 minikube start --driver=virtualbox --no-vtx-check
+
+// Personal Configurations
+minikube start --driver=virtualbox --memory 4000 --cpus 4 --no-vtx-check
 ```
 
 For Docker
