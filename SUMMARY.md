@@ -1,42 +1,77 @@
 # Table of contents
 
-* [Tools](README.md)
-* [Index](index.md)
-* [Source / Documentation](source-documentation.md)
-* [Kubernetes for Beginners](kubernetes-for-beginners/README.md)
-  * [What is containers ?](kubernetes-for-beginners/what-is-containers.md)
-  * [What is container orchestration ?](kubernetes-for-beginners/what-is-container-orchestration.md)
-  * [What is Kubernetes ?](kubernetes-for-beginners/what-is-kubernetes.md)
-  * [What is Cluster ?](kubernetes-for-beginners/what-is-cluster/README.md)
-    * [Pod](kubernetes-for-beginners/what-is-cluster/pod.md)
-    * [Node / Worker Node](kubernetes-for-beginners/what-is-cluster/node-worker-node.md)
-    * [Kubernetes Master](kubernetes-for-beginners/what-is-cluster/kubernetes-master.md)
-    * [Kubernetes Services](kubernetes-for-beginners/what-is-cluster/kubernetes-services.md)
-  * [What is kubectl ?](kubernetes-for-beginners/what-is-kubectl.md)
-  * [Kubernetes Access Control](kubernetes-for-beginners/kubernetes-access-control.md)
-* [Practical with minikube](practical-with-minikube/README.md)
-  * [Installation](practical-with-minikube/installation.md)
-  * [Cluster Setup](practical-with-minikube/cluster-setup.md)
-  * [Minikube commands](practical-with-minikube/minikube-commands.md)
-  * [Deployment](practical-with-minikube/deployment.md)
-  * [Kubernetes Dashboard](practical-with-minikube/kubernetes-dashboard.md)
-  * [YAML File](practical-with-minikube/yaml-file.md)
-  * [Container Runtime](practical-with-minikube/container-runtime.md)
-  * [Volume Management](practical-with-minikube/volume-management.md)
-  * [Config Maps and Secrets](practical-with-minikube/config-maps-and-secrets.md)
-* [Kubernetes for Developers](kubernetes-for-developers/README.md)
-  * [Kubernetes Architecture](kubernetes-for-developers/kubernetes-architecture.md)
-  * [The Borg Heritage](kubernetes-for-developers/the-borg-heritage.md)
-* [Practical - 2](practical-2/README.md)
-  * [Kubernetes Installation in AWS](practical-2/kubernetes-installation-in-aws.md)
-  * [Build](practical-2/build.md)
-* [Temp Bookmarks](temp-bookmarks.md)
-* [NFS Server](nfs-server.md)
+* [👋 Welcome to Kubernetes](README.md)
+* [📚 Pre-Requirements](pre-requirements.md)
 
-## Troubleshooting
+## Cluster Setup
 
-* [Basic Troubleshooting](troubleshooting/basic-troubleshooting.md)
+* [Kubectl](cluster-setup/kubectl.md)
+* [Minikube](cluster-setup/minikube.md)
+* [K3s](cluster-setup/k3s.md)
 
-## Group 1
+## Architecture
 
-* [Other Things](group-1/other-things.md)
+* [What is Kubernetes](architecture/what-is-kubernetes.md)
+* [The Borg Heritage](architecture/the-borg-heritage.md)
+* [Kubernetes Arch.](architecture/kubernetes-arch..md)
+* [Containers](architecture/containers.md)
+* [Pods](architecture/pods.md)
+* [Services](architecture/services.md)
+* [Deployment](architecture/deployment.md)
+
+## Build
+
+* [Containerizion](build/containerizion.md)
+* [Dockerfile](build/dockerfile.md)
+* [Deployment](build/deployment.md)
+* [Multi-Container Pod](build/multi-container-pod.md)
+
+## Design
+
+* [Resources Management](design/resources-management.md)
+* [Label and Selector](design/label-and-selector.md)
+* [Jobs and CronJobs](design/jobs-and-cronjobs.md)
+
+## Deployments
+
+* [Basic Commands](deployments/basic-commands.md)
+* [Storage configs](deployments/storage-configs/README.md)
+  * [Volumes](deployments/storage-configs/volumes.md)
+  * [Volume Types](deployments/storage-configs/volume-types.md)
+  * [PVC and PV](deployments/storage-configs/pvc-and-pv.md)
+* [Config Maps](deployments/config-maps.md)
+
+## 🔐 Security
+
+* [Accessing the API](security/accessing-the-api/README.md)
+  * [Authentication](security/accessing-the-api/authentication.md)
+  * [Authorization](security/accessing-the-api/authorization.md)
+  * [Admission Controller](security/accessing-the-api/admission-controller.md)
+* [Security Contest](security/security-contest/README.md)
+  * [Pod Security Policies](security/security-contest/pod-security-policies.md)
+  * [Pod Security Standard](security/security-contest/pod-security-standard.md)
+* [Network Policies](security/network-policies/README.md)
+  * [Example](security/network-policies/example.md)
+* [Practical](security/practical/README.md)
+  * [Security Context](security/practical/security-context.md)
+  * [Create / Consume Secrets](security/practical/create-consume-secrets.md)
+  * [Service Account](security/practical/service-account.md)
+  * [Network Policies](security/practical/network-policies.md)
+  * [Test Policy](security/practical/test-policy.md)
+  * [Assignment](security/practical/assignment.md)
+
+## Services
+
+* [Service Types](services/service-types/README.md)
+  * [Cluster IP](services/service-types/cluster-ip.md)
+  * [NodePort](services/service-types/nodeport.md)
+  * [LoadBalancer](services/service-types/loadbalancer.md)
+* [Container Commands](services/container-commands.md)
+* [Ingress Resources](services/ingress-resources.md)
+
+## Others
+
+* [NFS Server](others/nfs-server.md)
+* [Shortcut](others/shortcut.md)
+* [Podman](others/podman.md)
+* [Overall Architecture](others/overall-architecture.md)

@@ -1,28 +1,49 @@
 ---
-description: Tools we are going to use in this course
+cover: .gitbook/assets/5643187419873280.png
+coverY: 0
+layout:
+  cover:
+    visible: true
+    size: hero
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
 ---
 
-# Tools
+# 👋 Welcome to Kubernetes
 
-## Open Source Kubernetes platform&#x20;
+{% hint style="info" %}
+**About this page:** The page summarizes Kubernetes architecture and applications, including components like nodes, API server, scheduler, and its versatility in deployments.
+{% endhint %}
 
-To learn about kubernetes in depth
 
-{% embed url="https://collabnix.github.io/kubelabs/" fullWidth="false" %}
 
-## Where and how to run kubernetes ?
+### Check the pre-requisites and go for the Kubernetes.
 
-### AWS and Google Cloud ( Paid / Billing)
+{% content-ref url="pre-requirements.md" %}
+[pre-requirements.md](pre-requirements.md)
+{% endcontent-ref %}
 
-You have to create instances to run cluster in aws and cloud. Chance of getting bills.
 
-### Katacoda ( Free / Temporary )
 
-It is a free service but it's cluster gets deleted after few minutes.
+### Different way to install cluster on your system.
 
-### Minikube ( Free )
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
-It's let you create cluster on your local machine. Easy to learn from scratch.
 
-{% embed url="https://minikube.sigs.k8s.io/docs/handbook/controls/" %}
+
+### Kubernetes Architecture
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
 
