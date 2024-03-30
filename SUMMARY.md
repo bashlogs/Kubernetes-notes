@@ -32,3 +32,11 @@
   * [Build](practical-2/build.md)
 * [Temp Bookmarks](temp-bookmarks.md)
 * [NFS Server](nfs-server.md)
+
+## Troubleshooting
+
+* [Basic Troubleshooting](troubleshooting/basic-troubleshooting.md)
+
+## Group 1
+
+* [Other Things](group-1/other-things.md)
