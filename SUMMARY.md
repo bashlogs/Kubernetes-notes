@@ -8,7 +8,6 @@
 * [Kubectl](cluster-setup/kubectl.md)
 * [Minikube](cluster-setup/minikube.md)
 * [K3s](cluster-setup/k3s.md)
-* [NFS Server](cluster-setup/nfs-server.md)
 
 ## Architecture
 
@@ -72,6 +71,7 @@
 
 ## Others
 
+* [NFS Server](others/nfs-server.md)
 * [Shortcut](others/shortcut.md)
 * [Podman](others/podman.md)
 * [Overall Architecture](others/overall-architecture.md)
