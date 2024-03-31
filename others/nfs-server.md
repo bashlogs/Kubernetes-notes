@@ -12,11 +12,7 @@ sudo apt update
 sudo apt install nfs-kernel-server
 ```
 
-<div align="center" data-full-width="false">
-
-<figure><img src="https://bashlogs.gitbook.io/~gitbook/image?url=https:%2F%2F2961128508-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FuAu6jYJqhZp7YpOWRmwI%252Fuploads%252Fdru6qBnzziqcaW5v766f%252FScreenshot%2520from%25202024-01-20%252020-17-29.png%3Falt=media%26token=3557e389-05ca-4fb7-87e8-9cca2d5360a7&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=cfe0983cb828c45ceef223d9830144ed4d5c43cac78d1dd438543bb882f544f8" alt=""><figcaption></figcaption></figure>
-
-</div>
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 ### Step 2: Create an nfs repository <a href="#step-2-create-an-nfs-repository" id="step-2-create-an-nfs-repository"></a>
 

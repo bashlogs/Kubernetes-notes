@@ -21,3 +21,4 @@ sudo -i
 k3s kubectl get node
 ```
 
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
