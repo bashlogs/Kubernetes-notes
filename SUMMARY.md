@@ -39,7 +39,7 @@
   * [Volumes](deployments/storage-configs/volumes.md)
   * [Volume Types](deployments/storage-configs/volume-types.md)
   * [PV and PVC](deployments/storage-configs/pv-and-pvc.md)
-* [Config Maps](deployments/config-maps.md)
+* [Config Maps / Secrets](deployments/config-maps-secrets.md)
 
 ## 🔐 Security
 

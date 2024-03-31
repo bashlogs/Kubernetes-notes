@@ -41,6 +41,7 @@ The reclaim phase has three options:
 
 The following example shows a basic declaration of a **PersistentVolume** using the **hostPath** type.
 
+{% code title="pv.yaml" %}
 ```yaml
 kind: PersistentVolume
 apiVersion: v1
@@ -53,12 +54,79 @@ capacity:
         storage: 10Gi
     accessModes:
         - ReadWriteOnce
+    persistentVolumeReclaimPolicy: Retain
+    storageClassName: maunal
     hostPath:
         path: "/somepath/data01"
 ```
+{% endcode %}
 
 Each type will have its own configuration settings. For example, an already created Ceph or GCE Persistent Disk would not need to be configured, but could be claimed from the provider.
 
 Persistent volumes are cluster-scoped, but persistent volume claims are namespace-scoped. An alpha feature since v1.11 this allows for static provisioning of Raw Block Volumes, which currently support the Fibre Channel plugin. There is a lot of development and change in this area, with plugins adding dynamic provisioning.
 
 ## Persistent Volume Claim
+
+{% code title="pvc.yaml" %}
+```yaml
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: myclaim
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 2Gi
+  storageClassName: manual
+```
+{% endcode %}
+
+Create both the files
+
+```
+kubectl create -f pv.yaml
+kubectl create -f pvc.yaml
+```
+
+## Claim as volume
+
+{% code title="nginx.yaml" %}
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  initContainers:
+    - name: busybox
+      image: busybox
+      command: ['sh', '-c', 'echo Hello World! > /usr/share/nginx/html/index.html']
+      volumeMounts:
+      - mountPath: "/usr/share/nginx/html"
+        name: mypod
+  containers:
+    - name: nginx
+      image: nginx
+      volumeMounts:
+      - mountPath: "/usr/share/nginx/html"
+        name: mypod
+  volumes:
+    - name: mypod
+      persistentVolumeClaim:
+        claimName: myclaim
+```
+{% endcode %}
+
+Create the pod and test the connection
+
+```
+kubectl create -f nginx.yaml
+
+# Get the pod info.
+kubectl get pods -o wide
+
+# Get the pod ip and check the connection
+curl <ip_address>
+```
