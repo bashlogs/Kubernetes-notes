@@ -8,3 +8,24 @@ Consider the possible ways you may want to group your pods and other objects in 
 
 
 
+### Add Labels
+
+```
+Kubectl label pod <pod_name> key1=value1
+
+# OR
+
+kubectl label -l key1=value1 key2=value2
+# -l for filtering based on labels
+```
+
+### Remove Labels
+
+```
+kubectl label pod <pod_name> key1-
+
+# OR
+
+kubectl label -l key1=value1 key2-
+```
+

@@ -4,6 +4,8 @@
 
 The following YAML file, for Pod **ExampleA** creates a Pod with two containers, one called **alphacont**, the other called **betacont** both with access to a shared volume called **sharevol**:
 
+{% tabs %}
+{% tab title="EmptyDir" %}
 ```yaml
  containers:
  - name: alphacont
@@ -18,8 +20,34 @@ The following YAML file, for Pod **ExampleA** creates a Pod with two containers,
      name: sharevol
  volumes:
  - name: sharevol
-   emptyDir: {}  
-    
+   emptyDir: {} 
+```
+{% endtab %}
+
+{% tab title="Hostpath" %}
+```yaml
+ containers:
+ - name: alphacont
+   image: busybox
+   volumeMounts:
+   - mountPath: /alphadir
+     name: sharevol
+ - name: betacont
+   image: busybox
+   volumeMounts:
+   - mountPath: /betadir
+     name: sharevol
+ volumes:
+ - name: sharevol
+   hostPath:
+     path: /vol/dir
+```
+{% endtab %}
+{% endtabs %}
+
+Run the file and check if it's mounted or not
+
+```yaml
 $ kubectl exec -ti exampleA -c betacont -- touch /betadir/foobar
 $ kubectl exec -ti exampleA -c alphacont -- ls -l /alphadir
 ```

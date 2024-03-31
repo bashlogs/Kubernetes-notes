@@ -9,7 +9,7 @@
 
 {% tabs %}
 {% tab title="jobs.yaml" %}
-<pre><code><strong>apiVersion: batch/v1
+<pre class="language-yaml"><code class="lang-yaml"><strong>apiVersion: batch/v1
 </strong>kind: Job
 metadata:
   name: sleepy
@@ -34,10 +34,19 @@ spec:
 Commands:
 
 ```
+# To create the job
 kubectl create -f job.yaml
+
+# To get jobs
 kubectl get job
+
+# To describe jobs
 kubectl describe jobs.batch sleepy
+
+# To get the yaml files of job
 kubectl get jobs.batch sleepy -o yaml
+
+# To delete the job
 kubectl delete jobs.batch sleepy
 ```
 
@@ -73,22 +82,29 @@ spec:                        #<-- Remove completions:, parallelism:, and activeD
 
 In the cron schedule '10 3 16 12 3', each segment represents a specific time component. Let's break down the meaning of each segment:
 
-```
-10: Minutes - This specifies the minute at which the job should be scheduled to run. In this case, it's set to 10.
-3: Hours - This specifies the hour at which the job should be scheduled to run. In this case, it's set to 3, which represents 3:00 AM.
-16: Day of month - This specifies the day of the month at which the job should be scheduled to run. In this case, it's set to the 16th day of the month.
-12: Month - This specifies the month at which the job should be scheduled to run. In this case, it's set to December (the 12th month).
-3: Day of week - This specifies the day of the week at which the job should be scheduled to run. In the cron syntax, 0 and 7 both represent Sunday, so 1-6 represent Monday to Saturday. Here, it's set to 3, which represents Wednesday.
-```
+<pre data-overflow="wrap"><code><strong>1) 10: Minutes - This specifies the minute at which the job should be scheduled to run. In this case, it's set to 10.
+</strong><strong>
+</strong>2) 3: Hours - This specifies the hour at which the job should be scheduled to run. In this case, it's set to 3, which represents 3:00 AM.
+
+3) 16: Day of month - This specifies the day of the month at which the job should be scheduled to run. In this case, it's set to the 16th day of the month.
+
+4) 12: Month - This specifies the month at which the job should be scheduled to run. In this case, it's set to December (the 12th month).
+
+5) 3: Day of week - This specifies the day of the week at which the job should be scheduled to run. In the cron syntax, 0 and 7 both represent Sunday, so 1-6 represent Monday to Saturday. Here, it's set to 3, which represents Wednesday.
+</code></pre>
 
 So, '10 3 16 12 3' specifies a schedule to run the job at 3:10 AM on the 16th of December, specifically on a Wednesday. This means the specified task (in this case, the Job) will be executed on that specific date and time, which falls on a Wednesday.
 
 Commands:
 
 ```
+# To create cronjobs
 kubectl create -f cronjobs.yaml
+
+# To get cronjobs
 kubectl get cronjobs
-kubectl get jobs
+
+# To delete cronjobs
 kubectl delete cronjobs.batch sleepy
 ```
 
@@ -121,7 +137,6 @@ spec:
             - -c
             - sleep 30
           restartPolicy: OnFailure
-
 ```
 {% endtab %}
 
@@ -145,8 +160,6 @@ spec:
             - -c
             - date; sleep 30
           restartPolicy: OnFailure
-
-
 ```
 {% endtab %}
 {% endtabs %}

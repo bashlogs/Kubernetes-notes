@@ -16,7 +16,7 @@ The three access modes are RWO (ReadWriteOnce), which allows read-write by a sin
 
 One of the many types of storage available is an **emptyDir**. The kubelet will create the directory in the container, but not mount any storage. Any data created is written to the shared container space. As a result, it would not be persistent storage. When the Pod is destroyed, the directory would be deleted along with the container.
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
