@@ -19,13 +19,17 @@ minikube start --driver=virtualbox --memory 4000 --cpus 4 --no-vtx-check
 
 ### For Docker
 
+Enable  and restart the docker
+
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
 ```
 minikube start --driver=docker
 ```
 
 ### For Hyper-v, hyperkit, parallels, vmware
 
-Copy
+Enable the Kubernetes in respective your platform and follow the below command
 
 ```
 minikube start --driver=hyperv
@@ -40,8 +44,8 @@ After Installation check the status:
 minikube status
 ```
 
-![](https://bashlogs.gitbook.io/\~gitbook/image?url=https:%2F%2Fcontent.gitbook.com%2Fcontent%2FuAu6jYJqhZp7YpOWRmwI%2Fblobs%2FumlZeWRP4SPQuP3MGvTH%2Fimage.png\&width=768\&dpr=4\&quality=100\&sign=71304331ff2aa19c2871b55547712ba59e7ef10763a9d2fd2e24f197635853d1)
+<figure><img src="../.gitbook/assets/11.png" alt=""><figcaption></figcaption></figure>
 
-![](https://bashlogs.gitbook.io/\~gitbook/image?url=https:%2F%2Fcontent.gitbook.com%2Fcontent%2FuAu6jYJqhZp7YpOWRmwI%2Fblobs%2FIEdiw7qU80GtZueaxfFa%2FVirtualBox\_JUDYAdqQTJ.png\&width=768\&dpr=4\&quality=100\&sign=e9e20111d1c8fa21da3860d533b2b910794c1d40a32b4af69b0a9398e05a676c)
+<figure><img src="../.gitbook/assets/12.png" alt=""><figcaption></figcaption></figure>
 
 That's it, a single node cluster is successfully created in your machine.
